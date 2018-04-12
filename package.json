@@ -10,7 +10,15 @@
     "type": "git",
     "url": "git+https://github.com/DanielRuf/filter-webpack-plugin.git"
   },
-  "keywords": [],
+  "keywords": [
+    "assets",
+    "files",
+    "filter",
+    "ignore",
+    "webpack",
+    "webpack-plugin",
+    "webpack4"
+  ],
   "author": "",
   "license": "ISC",
   "bugs": {
