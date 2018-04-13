@@ -4,12 +4,12 @@ function FilterPlugin(options) {
 
 FilterPlugin.prototype.apply = function(compiler) {
   compiler.plugin('emit', function(compilation, callback) {
-    if(typeof files !=='undefined'){
+    if(typeof files !=='undefined' && files.length){
         if(files.constructor === Array){
             for(i = 0; i < files.length; i++){
                 delete compilation.assets[files[i]]
             }
-        } else if(files.length){
+        } else {
             delete compilation.assets[files]
         }
     }
