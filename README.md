@@ -4,7 +4,7 @@
 
 This is often needed when you have entry points which are not JavaScript files and processed by other plugins like `extract-text-webpack-plugin`.
 
-## install
+## Installation
 
 `npm i filter-webpack-plugin -D`
 
