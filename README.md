@@ -14,4 +14,4 @@ This is often needed when you have entry points which are not JavaScript files a
 Yes, but most of them are not as small as this one.
 
 ### How can I use a dynamic files array?
-You can use `globby` or any glob solution for this.
+You can use `globby` or any other glob solution for this.
