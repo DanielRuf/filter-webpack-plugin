@@ -5,7 +5,7 @@ function FilterPlugin(options) {
 const cb = function (compilation, callback) {
     if (typeof files !== 'undefined' && files.length) {
         if (files.constructor === Array) {
-            for (i = 0; i < files.length; i++) {
+            for (let i = 0; i < files.length; i++) {
                 delete compilation.assets[files[i]]
             }
         } else {
