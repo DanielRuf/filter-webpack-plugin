@@ -1,0 +1,16 @@
+{
+  "name": "filter-test",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "build": "cross-env NODE_ENV=production webpack",
+    "test": "node ../scripts/check-emitted-files.js"
+  },
+  "devDependencies": {
+    "cross-env": "^5.2.0",
+    "webpack": "^4.32.2",
+    "webpack-cli": "^3.3.2"
+  }
+}
