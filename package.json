@@ -17,7 +17,9 @@
     "ignore",
     "webpack",
     "webpack-plugin",
-    "webpack4"
+    "webpack3",
+    "webpack4",
+    "webpack5"
   ],
   "author": "",
   "license": "ISC",
