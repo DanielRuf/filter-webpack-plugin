@@ -1,5 +1,7 @@
 # filter-webpack-plugin
 
+[![Build Status](https://github.com/DanielRuf/filter-webpack-plugin/workflows/CI/badge.svg)](https://github.com/DanielRuf/filter-webpack-plugin/actions?workflow=CI)
+
 `filter-webpack-plugin` removes unwanted emitted assets from the output of webpack.  
 
 This is often needed when you have entry points which are not JavaScript files and processed by other plugins like `extract-text-webpack-plugin`.
