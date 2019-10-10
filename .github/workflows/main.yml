@@ -1,0 +1,69 @@
+name: CI
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    strategy:
+      matrix:
+        platform: [ubuntu-latest]
+        node: [ '12', '10', '8' ]
+    name: webpack 5 - Node ${{ matrix.node }} (${{ matrix.platform }})
+    runs-on: ${{ matrix.platform }}
+    steps:
+      - uses: actions/checkout@v1
+      - uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node }}
+      - name: run tests
+        run: |
+          echo 'starting tests...' && \
+          cd tests/webpack5 && \
+          yarn && \
+          yarn build && \
+          yarn test
+
+  build_latest:
+    name: webpack 5 - Node latest
+    runs-on: ubuntu-latest
+    container: node:current
+    steps:
+      - uses: actions/checkout@v1
+      - name: run tests
+        run: |
+          echo 'starting tests...' && \
+          cd tests/webpack5 && \
+          yarn && \
+          yarn build && \
+          yarn test
+
+  build_8:
+    runs-on: ubuntu-latest
+    name: webpack 3 - Node 8 (ubuntu-latest)
+    steps:
+      - uses: actions/checkout@v1
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 8
+      - name: run tests
+        run: |
+          echo 'starting tests...' && \
+          cd tests/webpack5 && \
+          yarn && \
+          yarn build && \
+          yarn test
+
+  build_10:
+    runs-on: ubuntu-latest
+    name: webpack 4 - Node 10 (ubuntu-latest)
+    steps:
+      - uses: actions/checkout@v1
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 10
+      - run: |
+          echo 'starting tests...' && \
+          cd tests/webpack5 && \
+          yarn && \
+          yarn build && \
+          yarn test
