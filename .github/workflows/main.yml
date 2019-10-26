@@ -26,7 +26,7 @@ jobs:
   build_latest:
     name: webpack 5 - Node latest
     runs-on: ubuntu-latest
-    container: node:current
+    container: node:latest
     steps:
       - uses: actions/checkout@v1
       - name: run tests
